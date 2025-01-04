@@ -169,8 +169,15 @@ La fase di Maintaining Access configura metodi per mantenere il controllo del si
 ### Creazione di un Utente con Privilegi di Root
 1. Crea un nuovo utente:
    ```bash
-   useradd -m -s /bin/bash -G sudo hacker
-   passwd hacker
+   sudo useradd -m -s /bin/bash hacker
+   [...msfadmin password...]
+   sudo passwd hacker
+   [...msfadmin password...]
+   [...insert password 2 times...]
+   sudo usermod -aG sudo hacker
+   [...msfadmin password...]
+   su hacker
+   [...password of hacker...]
    ```
 
 ---
